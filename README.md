@@ -18,7 +18,7 @@ Let's understand with example:
       end
     end
 
-####In above way, We are defining the methods on  an object (self). The syntax is concise and descriptive. When browsing a file of code, the use of self. makes it very clear that the method is a class method.
+In above way, We are defining the methods on  an object (self). The syntax is concise and descriptive. When browsing a file of code, the use of self. makes it very clear that the method is a class method.
 
     # 2nd way
     class << Person
@@ -27,7 +27,7 @@ Let's understand with example:
       end
     end
 
-####By using class << Person, we are setting self to Person‘s metaclass for the duration of the block. We should prefer this way when we have a class with a lot of class methods.
+By using class << Person, we are setting self to Person‘s metaclass for the duration of the block. We should prefer this way when we have a class with a lot of class methods.
 
     # 3rd way 
     class Person
@@ -38,7 +38,7 @@ Let's understand with example:
       end
     end
 
-####This is similar to 2nd way, Only different way to define method.  Here we open Person, making self equal to the Person class. Next, we do class << self, making self equal to Person‘s metaclass. When we then define the species method, it is defined on Person‘s metaclass.
+This is similar to 2nd way, Only different way to define method.  Here we open Person, making self equal to the Person class. Next, we do class << self, making self equal to Person‘s metaclass. When we then define the species method, it is defined on Person‘s metaclass.
 
     class Person; end
     
@@ -47,7 +47,7 @@ Let's understand with example:
       p "I want to play"
     end
 
-####This is also one of way to define class methods, We can quickly add methods on the fly to a class. the ones that I see the most.
+This is also one of way to define class methods, We can quickly add methods on the fly to a class. the ones that I see the most.
 
 ####Meta programming, add methods on the fly to a class.
 
@@ -58,9 +58,9 @@ Let's understand with example:
       end
     end
 
-####The 5th way, instance_eval, actually it's something interesting, I will cover this in next post in detials.
-Person.play
+The 5th way, instance_eval, actually it's something interesting, I will cover this in next post in detials.
+    Person.play
 
 ###Conclusion
 
-####Class methods can only be called on classes. Hope this helps. If I was unclear or incorrect at any point above, let me know.
+#####Class methods can only be called on classes. Hope this helps. If I was unclear or incorrect at any point above, let me know.
